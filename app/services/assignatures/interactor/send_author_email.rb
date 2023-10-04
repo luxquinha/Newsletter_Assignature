@@ -2,7 +2,7 @@ module Assignatures
     module Interactor
         class SendAuthorEmail
             include Interactor
-
+            # It's send the body's message and the email to Send:
             def call
                 Notification::Send.call(
                     body: message
