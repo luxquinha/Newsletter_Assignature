@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  newsletter_id: one
+  reader_id: one
+
+two:
+  newsletter_id: two
+  reader_id: two
