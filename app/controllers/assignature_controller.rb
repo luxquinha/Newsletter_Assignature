@@ -19,11 +19,11 @@ class AssignatureController < ApplicationController
      end
      #It create a new assignature e save it in database:
      def create
-         assigature = Organizers::CreateAssignature.call(reader_id: params[:reader_id], newsletter_id: params[:newsletter_id])
-         if assigature.sucess?
-            render json: assignature
+         assignature = Organizers::CreateAssignature.call(reader_id: params[:reader_id], newsletter_id: params[:newsletter_id])
+         if assignature.sucess?
+            render json: assignature.assignature.as_json
          else
-            render json: {message: assigature.message}
+            render json: assignature.message.as_json
          end
      end
      #It update an existent assignature on database:

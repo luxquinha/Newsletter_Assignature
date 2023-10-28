@@ -1,10 +1,10 @@
 module Notification
-    module Interactor
+    module Interactors
         class Send
             include Interactor
             # It's receive the body's message and the email to send respective message:
             def call
-                puts context.message
+                # context.message_sended = true
             end
         end
     end

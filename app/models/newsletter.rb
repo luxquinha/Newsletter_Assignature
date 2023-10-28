@@ -3,6 +3,6 @@ class Newsletter < ApplicationRecord
   has_many :assignatures
   
   def author_name
-    newsletter.author.name
+    author.name
   end
 end

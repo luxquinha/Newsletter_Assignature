@@ -1,13 +1,14 @@
 module Assignatures
-    module Interactor
+    module Interactors
         class SendReaderEmail
             include Interactor
             # It's send the body's message and the email to Send:
             def call
-                Notification::Send.call(
-                    body: message,
-                    email: context.reader.email
-                )
+                # Notification::Interactors::Send.call(
+                #     body: message,
+                #     email: context.reader.email
+                # )
+                context.reader_message = true
             end
             private
             def newsletter

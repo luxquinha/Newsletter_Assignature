@@ -23,6 +23,10 @@ gem "turbo-rails"
 
 gem "interactor", "~> 3.0"
 
+gem "rspec-rails", '~> 6.0.0'
+
+gem 'byebug', '~> 9.0', '>= 9.0.5'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
