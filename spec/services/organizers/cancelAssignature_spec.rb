@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.describe (Organizers::CancelAssignature) do
     # Setup:
-    let(:author) {Author.create(name: "Leon")}
-    let(:reader) {Reader.create(name: "Matheus")}
-    let(:newsletter) {Newsletter.create(title: "Javascript", author: author)}
-    let(:assignature) {Assignature.create(reader_id: reader.id, newsletter_id: newsletter.id)}
+    let(:reader) { FactoryBot.create(:reader) }
+    let(:newsletter) { FactoryBot.create(:newsletter)}
+    let(:assignature) { FactoryBot.create(:assignature)}
     let(:result) {described_class.call(
         reader_id: reader.id,
         newsTitle: newsletter.title
@@ -25,7 +24,7 @@ RSpec.describe (Organizers::CancelAssignature) do
         context "When assignature was deleted" do
 
             it "Finds the newsletter's author" do
-                expect(result.author).to eq(author)
+                expect(result.author.name).to eq("Lucas Ramos")
             end
 
             it "Sends a message to author" do

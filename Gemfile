@@ -25,6 +25,8 @@ gem "interactor", "~> 3.0"
 
 gem "rspec-rails", '~> 6.0.0'
 
+gem 'factory_bot_rails'
+
 gem 'byebug', '~> 9.0', '>= 9.0.5'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
